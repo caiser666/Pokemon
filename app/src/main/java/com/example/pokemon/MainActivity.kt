@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        rv_pokemon.layoutManager = LinearLayoutManager(this)
-        rv_pokemon.adapter = PokemonListAdapter {
+        rv_pokemon_list.layoutManager = LinearLayoutManager(this)
+        rv_pokemon_list.adapter = PokemonListAdapter {
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("id", it)
             startActivity(intent)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getPokemonList()
 
         viewModel.pokemonList.observe(this, { list ->
-            (rv_pokemon.adapter as PokemonListAdapter).setData(list)
+            (rv_pokemon_list.adapter as PokemonListAdapter).setData(list)
         })
 
         fab_my_pokemon_list.setOnClickListener {
