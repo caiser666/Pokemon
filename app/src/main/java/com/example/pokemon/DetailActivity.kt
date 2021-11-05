@@ -44,8 +44,8 @@ class DetailActivity : AppCompatActivity() {
             tv_pokemon_types.text = "Types:"
             tv_pokemon_physically.text = "Physically:"
             tv_pokemon_name.text = pokemon.name
-            tv_pokemon_height.text = "Height: ${pokemon.height} m"
-            tv_pokemon_weight.text = "Weight: ${pokemon.weight} kg"
+            tv_pokemon_height.text = "Height: ${pokemon.height / 10} m"
+            tv_pokemon_weight.text = "Weight: ${pokemon.weight / 10} kg"
             rv_pokemon_stats.adapter = PokemonStatListAdapter(pokemon.stats)
             rv_pokemon_types.adapter = PokemonTypeListAdapter(pokemon.types)
 
