@@ -1,6 +1,5 @@
 package com.example.pokemon.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.pokemon.Constants.BASE_URL

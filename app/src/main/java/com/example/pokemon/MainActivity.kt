@@ -3,7 +3,6 @@ package com.example.pokemon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokemon.adapters.PokemonListAdapter
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(PokemonListViewModel::class.java)
 
-        initUI();
+        initUI()
     }
 
     private fun initUI() {
@@ -32,11 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.getPokemonList()
 
-        viewModel.pokemonList.observe(this, Observer { list ->
+        viewModel.pokemonList.observe(this, { list ->
             (rv_pokemon.adapter as PokemonListAdapter).setData(list)
         })
 
-        fab_my_pokemon_list.setOnClickListener { view ->
+        fab_my_pokemon_list.setOnClickListener {
             val intent = Intent(this, MyListActivity::class.java)
             startActivity(intent)
         }

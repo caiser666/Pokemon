@@ -1,5 +1,6 @@
 package com.example.pokemon.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,9 @@ import com.example.pokemon.models.PokemonResult
 import kotlinx.android.synthetic.main.card_item_pokemon.view.*
 
 class PokemonListAdapter(val pokemonClick: (Int) -> Unit): RecyclerView.Adapter<PokemonListAdapter.SearchViewHolder>() {
-    var pokemonList: List<PokemonResult> = emptyList<PokemonResult>()
+    var pokemonList: List<PokemonResult> = emptyList()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(list: List<PokemonResult>){
         pokemonList = list
         notifyDataSetChanged()
@@ -29,7 +31,7 @@ class PokemonListAdapter(val pokemonClick: (Int) -> Unit): RecyclerView.Adapter<
         val pokemon = pokemonList[position]
         holder.itemView.tv_pokemon_name.text = pokemon.name
         holder.itemView.setOnClickListener { pokemonClick(position + 1) }
-        var imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${position + 1}.png"
+        val imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${position + 1}.png"
         Glide.with(holder.itemView.context).load(imgUrl).into(holder.itemView.iv_pokemon_image)
     }
 
