@@ -33,7 +33,7 @@
                 android:layout_marginTop="8dp"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="11pt"
                 android:textStyle="bold"
                 tools:text="Pokemon Name" />
 
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/black"
-                android:textSize="12sp"
+                android:textSize="5.5pt"
                 android:textStyle="bold"
                 tools:text="Types:" />
 
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp"
+                    android:textSize="5.5pt"
                     android:textStyle="bold"
                     tools:text="Physically:" />
 
@@ -106,7 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:textSize="13sp"
+                        android:textSize="5.2pt"
                         tools:text="Height: 1m" />
 
                     <TextView
@@ -114,7 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:textSize="13sp"
+                        android:textSize="5.2pt"
                         tools:text="Weight: 1kg" />
                 </LinearLayout>
 
