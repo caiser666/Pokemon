@@ -1,6 +1,5 @@
 package com.example.pokemon.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +20,6 @@ class PokemonTypeListAdapter(private val pokemonList: List<PokemonTypes>): Recyc
 
     override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
         val pokemon = pokemonList[position]
-        Log.d("TAG", "onBindViewHolder: $pokemon")
         holder.itemView.tv_pokemon_type_name.text = pokemon.type?.name
     }
 

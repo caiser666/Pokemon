@@ -11,7 +11,7 @@ import com.example.pokemon.models.PokemonResult
 import kotlinx.android.synthetic.main.card_item_pokemon.view.*
 
 class PokemonListAdapter(val pokemonClick: (Int) -> Unit): RecyclerView.Adapter<PokemonListAdapter.SearchViewHolder>() {
-    var pokemonList: List<PokemonResult> = emptyList()
+    private var pokemonList: List<PokemonResult> = emptyList()
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(list: List<PokemonResult>){
